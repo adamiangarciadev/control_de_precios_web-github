@@ -1,0 +1,72 @@
+
+/* Zebra striping para alternar el color de las filas */
+#data-body tr:nth-child(even) {
+  background: #f9f9f9;
+}
+
+/* Efecto hover en filas para mejorar la visual */
+#data-body tr:hover {
+  background: #e0f0ff;
+  transition: background 0.2s;
+}
+
+/* Imágenes de productos más prolijas y centradas */
+#data-body td:first-child img {
+  max-width: 56px;
+  max-height: 56px;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Código de barras en monoespaciado para mejor lectura */
+.codigo {
+  font-family: monospace;
+  font-size: 0.95em;
+  color: #606060;
+}
+
+/* Responsive: oculta columnas menos importantes en móvil y achica imagen */
+@media (max-width: 600px) {
+  .ocultar-en-movil {
+    display: none;
+  }
+  #data-body td:first-child img {
+    max-width: 36px;
+    max-height: 36px;
+  }
+}
+
+/* Estilo pro para input de búsqueda */
+#search {
+  padding: 8px 28px 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #bbb;
+  box-shadow: 0 1px 2px #eee;
+  width: 220px;
+  margin-right: 8px;
+  background: url('https://cdn-icons-png.flaticon.com/512/622/622669.png') no-repeat 95% 50%/18px;
+}
+
+/* Estilo mejorado para los selectores */
+select {
+  border-radius: 8px;
+  padding: 8px 12px;
+  border: 1px solid #bbb;
+  box-shadow: 0 1px 2px #eee;
+  margin-right: 8px;
+}
+
+/* Animación suave al mostrar las filas */
+#data-body tr {
+  opacity: 0;
+  transform: translateY(15px);
+  animation: fadeInUp 0.35s forwards;
+}
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
