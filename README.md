@@ -1,4 +1,4 @@
-# Control de Precios Tina
+# Control de Precios TIENDA
 
 Webapp para consulta rápida y visual de precios de productos, marcas y promociones, basada en datos de Google Sheets.  
 Ideal para uso en kiosco, retail, bazar o negocios de belleza.  
