@@ -9,19 +9,15 @@
 <body>
   <h1 style="text-align:center;">Control de Precios Tina</h1>
   <div style="margin:20px 0; text-align:center;">
-    <!-- Input de búsqueda -->
     <input id="search" type="text" placeholder="Buscar producto, marca, piso o código" autocomplete="off">
-    <!-- Selects de filtro -->
     <select id="marcaFilter"></select>
     <select id="pisoFilter"></select>
   </div>
-  <!-- Loader de carga -->
   <div id="loader" style="display:none;text-align:center;margin:20px 0;">
     <span>Cargando productos...</span>
   </div>
-  <!-- Tabla de productos -->
   <div style="overflow-x:auto;">
-    <table style="width:100%; border-collapse:collapse; min-width:660px;">
+    <table id="tabla-productos" style="width:100%; border-collapse:collapse;">
       <thead>
         <tr>
           <th>Imagen</th>
@@ -32,9 +28,7 @@
           <th class="ocultar-en-movil">Piso</th>
         </tr>
       </thead>
-      <tbody id="data-body">
-        <!-- Los productos se agregan aquí dinámicamente -->
-      </tbody>
+      <tbody id="data-body"></tbody>
     </table>
   </div>
   <script src="script.js"></script>
