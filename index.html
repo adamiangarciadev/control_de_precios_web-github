@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Control de Precios</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Control de Precios</h1>
+  <div class="filter-section">
+    <input type="text" id="search" placeholder="Buscar por código, descripción, marca o piso">
+    <select id="marcaFilter"><option value="">Filtrar por Marca</option></select>
+    <select id="pisoFilter"><option value="">Filtrar por Piso</option></select>
+  </div>
+
+  <!-- Scroll horizontal con encabezado incluido -->
+  <div class="table-container">
+    <table>
+      <thead>
+  <tr>
+   <th>Imagen</th>
+<th>Precio</th>
+<th class="codigo-header">Código de Barras</th>
+<th class="descripcion-header">Descripción</th>
+<th class="ocultar-en-movil">Marca</th>
+<th class="ocultar-en-movil">Piso</th>
+
+  </tr>
+</thead>
+
+      <tbody id="data-body">
+        <!-- Filas dinámicas -->
+      </tbody>
+    </table>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

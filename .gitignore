@@ -1,0 +1,11 @@
+
+# Node modules (por si usás herramientas externas a futuro)
+node_modules/
+
+# Archivos temporales de sistemas operativos
+.DS_Store
+Thumbs.db
+
+# Build tools (si se suman en el futuro)
+dist/
+build/
