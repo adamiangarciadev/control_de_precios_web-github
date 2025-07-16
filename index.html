@@ -1,23 +1,28 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <title>Control de Precios/title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <title>Control de Precios</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <h1 style="text-align:center;">Control de Precios Tina</h1>
-  <div style="margin:20px 0; text-align:center;">
-    <input id="search" type="text" placeholder="Buscar producto, marca, piso o código" autocomplete="off">
+  <header>
+    <h1>📦 Control de Precios</h1>
+    <button id="toggle-mode" title="Alternar modo claro/oscuro">🌓</button>
+  </header>
+
+  <section class="filters">
+    <input id="search" type="text" placeholder="🔍 Buscar producto, marca, piso o código" autocomplete="off" />
     <select id="marcaFilter"></select>
     <select id="pisoFilter"></select>
-  </div>
-  <div id="loader" style="display:none;text-align:center;margin:20px 0;">
-    <span>Cargando productos...</span>
-  </div>
-  <div style="overflow-x:auto;">
-    <table id="tabla-productos" style="width:100%; border-collapse:collapse;">
+  </section>
+
+  <div id="loader" class="loader">Cargando productos...</div>
+
+  <div class="table-container">
+    <table id="tabla-productos" class="desktop-table">
       <thead>
         <tr>
           <th>Imagen</th>
@@ -30,7 +35,10 @@
       </thead>
       <tbody id="data-body"></tbody>
     </table>
+
+    <div id="card-list" class="mobile-cards"></div>
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
